@@ -1,15 +1,31 @@
 //index.tsx
-import React from "react";
+import React, { useRef, useState } from "react";
 import { NextPage } from "next/types";
 import ExpenseItem from "../components/expense-item/expense-item";
+import NewExpenseItemForm from "../components/new-expense-item/new-expense-item";
 interface Expense {
     id : string,
     title: string,
     amount:number,
-    date: string
+    date: object
 }
-const HomePage:NextPage<Expense> = ()=>{
-    const expenses = [
+const HomePage:NextPage = ()=>{
+    const [title, setTitle] = useState<string>('');
+    const [date, setDate] = useState<string>('');
+    const [amount, setAmount] = useState<number>();
+    const titleRef = useRef(null);
+    const dateRef = useRef(null);
+    const amountRef = useRef(null);
+    const formTextHandler = (e)=>{
+        e.preventDefault();
+        const titleValue = titleRef.current.value;
+        const dateValue = dateRef.current.value;
+        const amountValue = amountRef.current.value;
+        setTitle(titleValue);
+        setDate(dateValue);
+        setAmount(amountValue);
+    };
+    const expenses: Expense[] = [
         {
           id: 'e1',
           title: 'Toilet Paper',
@@ -32,6 +48,12 @@ const HomePage:NextPage<Expense> = ()=>{
       ];
     return <div>
         <h1>Hello World</h1>
+        <NewExpenseItemForm 
+            titleRef={titleRef} 
+            dateRef={dateRef}
+            amountRef={amountRef}
+            formTextHandler={formTextHandler}
+        />
         <ExpenseItem expenses={expenses}/>
     </div>
 }

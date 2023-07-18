@@ -9,3 +9,14 @@ body{
 ul{
     list-style-type: none;
 }
+.container{
+    width:80%;
+    margin:0 auto;
+    padding:.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+.card{
+    border:1px solid #fff;
+    border-radius:12px;
+    box-shadow: 3px 3px 15px 1px #000;
+}
