@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/expense-item/expense-item.jsx", "pages/_app.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,5 +1,5 @@
 //_app.tsx
-import '../styles/globals.css';
+import './globals.css';
 import React from 'react';
 import type {AppProps} from 'next/app';
 const MyApp = ({Component, pageProps}:AppProps) => {
