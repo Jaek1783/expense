@@ -50,7 +50,9 @@ const HomePage:NextPage = ()=>{
         },
       ];
     return <div>
-        <h1>Hello World</h1>
+        <h1>This is Expense Website</h1>
+        <h3>sorry, This Website is not Working</h3>
+        <h3>just studying website</h3>
         <NewExpenseItemForm 
             titleRef={titleRef} 
             dateRef={dateRef}

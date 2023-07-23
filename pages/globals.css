@@ -2,6 +2,15 @@
     padding:0;
     margin:0;
 }
+h1{
+    text-align: center;
+    padding-top:1rem;
+    color:#fff;
+}
+h3{
+    color:#fff;
+    text-align: center;
+}
 body{
     background-color: #333333;
     /* color:#fff; */
